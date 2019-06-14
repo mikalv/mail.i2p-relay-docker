@@ -18,7 +18,7 @@
      -o smtpd_tls_auth_only=no
      -o smtpd_sasl_auth_enable=no
      -o smtpd_client_restrictions=
-     -o smtpd_relay_restrictions=permit_mynetworks,reject
+     -o smtpd_relay_restrictions=permit
      -o smtpd_helo_restrictions=
      -o smtpd_sender_restrictions=
      -o smtpd_client_restrictions=
