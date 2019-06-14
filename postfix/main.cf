@@ -84,6 +84,16 @@ mail_owner = postfix
 #
 #default_privs = nobody
 
+
+
+# I2P Out-relay settings
+
+sender_canonical_classes = envelope_sender, header_sender
+sender_canonical_maps = pcre:/etc/postfix/sender_canonical
+local_header_rewrite_clients=static:all
+
+
+
 # INTERNET HOST AND DOMAIN NAMES
 # 
 # The myhostname parameter specifies the internet hostname of this
