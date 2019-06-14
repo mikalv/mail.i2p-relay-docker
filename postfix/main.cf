@@ -525,6 +525,9 @@ unknown_local_recipient_reject_code = 550
 #luser_relay = $user@other.host
 #luser_relay = $local@other.host
 #luser_relay = admin+$local
+
+# Reject message
+smtpd_reject_footer = Mail rejected, check syslog from time ($localtime), client ($client_address)
   
 # JUNK MAIL CONTROLS
 # 
