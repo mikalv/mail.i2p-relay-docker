@@ -2,22 +2,29 @@
 
 ## Incoming from I2P
 
-I2PROUTER_HOSTNAME:37281 inet n - - - - smtpd
-        -o syslog_name=postfix/i2p-postman
-        -o smtpd_use_tls=no
-        -o smtp_use_tls=no
-        -o content_filter=
-        -o smtpd_restriction_classes=
-        -o smtpd_tls_auth_only=no
-        -o smtpd_sasl_auth_enable=no
-        -o smtpd_client_restrictions=
-        -o smtpd_relay_restrictions=permit_mynetworks,reject
-        -o smtpd_helo_restrictions=
-        -o smtpd_sender_restrictions=
-        -o smtpd_client_restrictions=
-        -o recipient_delimiter=+
-        -o smtpd_tls_security_level=none
-        -o smtpd_tls_protocols=
+#
+# We use port 2552 for incoming from postman.
+#
+# In a correct setup this port won't be exposed to other than the host's
+# loopback device so we probably won't need auth.
+#
+
+2552 inet n - - - - smtpd
+     -o syslog_name=postfix/i2p-postman
+     -o smtpd_use_tls=no
+     -o smtp_use_tls=no
+     -o content_filter=
+     -o smtpd_restriction_classes=
+     -o smtpd_tls_auth_only=no
+     -o smtpd_sasl_auth_enable=no
+     -o smtpd_client_restrictions=
+     -o smtpd_relay_restrictions=permit_mynetworks,reject
+     -o smtpd_helo_restrictions=
+     -o smtpd_sender_restrictions=
+     -o smtpd_client_restrictions=
+     -o recipient_delimiter=+
+     -o smtpd_tls_security_level=none
+     -o smtpd_tls_protocols=
 
 
 #
